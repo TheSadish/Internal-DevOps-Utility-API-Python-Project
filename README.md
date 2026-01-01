@@ -25,3 +25,10 @@ async def get_data():
 
 # ASGI - ASGI is a standard that defines how a Python web app talks to a web server.
 - ASGI is a standard that defines how a Python web app talks to a web server, enabling asynchronous operations.
+
+
+Services should be kept aside because if they are decorated then 
+- You can’t reuse logic easily
+- You can’t test it without FastAPI
+- You can’t call it from another service
+- You can’t run it as a background job
