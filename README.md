@@ -20,7 +20,7 @@ The project is organized to keep routes, services, and app configuration separat
 Prerequisites:
 - Python 3.10+ (or compatible)
 - Git
-- awscli with
+- awscli with user creds
 
 Setup:
 
