@@ -1,34 +1,40 @@
-# Internal-DevOps-Utility-API-Python-Project
-Creating a python project for demonstrating utilities of a webpage
+# Internal DevOps Utility API 🚀
+
+A small FastAPI service that demonstrates internal DevOps utilities such as system metrics (CPU, memory, disk). The project is organized to keep routes, services, and app configuration separated for clarity and testability.
+
+---
+
+## Features ✅
+
+- Minimal FastAPI app with modular routers
+- `/metrics` endpoint returning CPU, memory, and disk usage (powered by `psutil`)
+- `/s3` endpoint returning AWS S3 bucket info (powered by `boto3`)
+- Clean separation between request handling (routers) and business logic (services)
+
+---
+
+## Quickstart 🔧
+
+Prerequisites:
+- Python 3.10+ (or compatible)
+- Git
+
+Setup:
+
+# clone repo
+git clone <repo-url>
+cd Internal-DevOps-Utility-API-Python-Project
+
+# create venv (Windows example)
+python -m venv myEnv
+myEnv\Scripts\activate
+
+# install deps
+pip install -r requirements.txt
+
+# Run the server:
+python main.py
 
 
-# Asynchronous
-- tasks executing independently without waiting for each other, improving efficiency by running background processes
-
-Synchronous Call
-
-@app.get("/data")
-def get_data():
-    result = slow_db_call()  # 2 seconds
-    return result
-
-Asynchronous Call
-
-@app.get("/data")
-async def get_data():
-    result = await slow_db_call()
-    return results
-
-# FastAPI defines the application
-# Uvicorn runs the application
-- Uvicorn is the ASGI server that loads the FastAPI app object and handles incoming HTTP requests.
-
-# ASGI - ASGI is a standard that defines how a Python web app talks to a web server.
-- ASGI is a standard that defines how a Python web app talks to a web server, enabling asynchronous operations.
-
-
-Services should be kept aside because if they are decorated then 
-- You can’t reuse logic easily
-- You can’t test it without FastAPI
-- You can’t call it from another service
-- You can’t run it as a background job
+Open API docs: http://localhost:8000/docs
+For better view : http://localhost:8000/redocs
