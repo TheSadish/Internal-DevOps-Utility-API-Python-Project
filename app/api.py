@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import metrics
+from routers import metrics, bucket_info
 
 app = FastAPI(   # FastAPI is a class
     title="DevOps internal utilities API",
@@ -17,3 +17,4 @@ def hello():
     return {"message":"Hello Guys"}
 
 app.include_router(metrics.router)  # Mounts the router object to FastAPI object
+app.include_router(bucket_info.router) 
