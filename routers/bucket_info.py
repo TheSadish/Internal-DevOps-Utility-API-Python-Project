@@ -3,7 +3,7 @@ from services import aws_service
 
 router = APIRouter()
 
-@router.get("/buckets")
+@router.get("/s3")
 def get_bucket():
     '''
     This API will fetch all the buckets from AWS

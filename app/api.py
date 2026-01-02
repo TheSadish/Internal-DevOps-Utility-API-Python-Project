@@ -17,4 +17,4 @@ def hello():
     return {"message":"Hello Guys"}
 
 app.include_router(metrics.router)  # Mounts the router object to FastAPI object
-app.include_router(bucket_info.router) 
+app.include_router(bucket_info.router, prefix="/aws") 
