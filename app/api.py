@@ -3,7 +3,7 @@ from routers import metrics, bucket_info
 
 app = FastAPI(   # FastAPI is a class
     title="DevOps internal utilities API",
-    description="Internal API utilities for which I will adding metrics",
+    description="Internal API utilities for which I will adding metrics and AWS Services",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redocs"
